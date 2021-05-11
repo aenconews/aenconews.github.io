@@ -1,0 +1,88 @@
+/* CSF */
+
+.contact-form {
+    width: 40%;
+    max-width: 450px;
+    margin: 15px 0;
+    text-align: left;
+}
+.contact-form  input, .contact-form  textarea  {
+    border: 0px;
+    outline: 0px;
+    width: 100%;
+    height: calc((100vw - 425px) * 16 / 2240 + 30px); /*46->30 @2560->320*/
+    margin-top: calc((100vw - 425px) * 5 / 2240 + 3px); /*5->3 @2560->320*/
+    margin-bottom: calc((100vw - 425px) * 5 / 2240 + 10px); /*15->10 @2560->320*/
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-family: RalewayLight;
+    font-size: calc((100vw - 425px) * 10 / 2135 + 12px); /* 22 -> 12 @2560 -> 320 */
+}
+/*overrides height*/
+.contact-form  textarea {
+	height: unset;	
+}
+.contact-form input:focus, .contact-form  textarea:focus {
+    background-color: #e6e7e8;
+    color: #323031;
+    border: 0px;
+}
+.contact-form  textarea  {
+	resize: vertical;
+}
+.contact-form ::placeholder {
+    font-family: RalewayRegular;
+    font-size: calc((100vw - 425px) * 10 / 2135 + 12px); /* 22 -> 12 @2560 -> 320 */
+    color: #6d6e70;
+}
+.submit-btn {
+	text-align: right;
+}
+.submit-btn input {
+    width: auto;
+    margin: auto;
+    background-color: #99a6dc;
+    border: 0px;
+    outline: 0px;
+    font-family: RalewayBold;
+    font-size: calc((100vw - 320px) * 5 / 2240 + 15px);
+    line-height: calc((100vw - 320px) * 5 / 2240 + 15px);
+    letter-spacing: 0.005em;
+    color: #ffffff;
+    text-align: center;
+    padding-top: calc((100vw - 320px) * 3 / 2240 + 5px);
+    padding-bottom: calc((100vw - 320px) * 3 / 2240 + 5px);
+    padding-left: calc((100vw - 320px) * 15 / 2240 + 15px);
+    padding-right: calc((100vw - 320px) * 15 / 2240 + 15px);
+    white-space: nowrap;
+    cursor: pointer;
+}
+.submit-btn input:hover, .submit-btn input:focus, .submit-btn active {
+	background-color: #8090d3;
+}
+
+/* =========== ERRORS ===========*/
+
+.sent-ok, .sent-error {
+    font-family: RalewayRegular;
+    font-size: calc((100vw - 320px) * 6 / 2240 + 12px);
+    border-radius: 50px;
+    margin-top: 30px;
+}
+.sent-ok {
+	color: #8bc53f;
+	display: none;
+}
+.sent-error {
+	color: #f1666a;
+	display: none;
+}
+
+/* =========== RESPONSIVE ===========*/
+
+
+@media only screen and (max-width: 768px) {
+	.contact-form {
+	    width: 100%;
+	}
+}

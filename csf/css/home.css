@@ -1,0 +1,78 @@
+/* CSF */
+
+.body {
+	width: 90%;
+	max-width: 1500px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.top-bar {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	padding:  calc((100vw - 320px) * 20 / 2240 + 30px) 0 calc((100vw - 320px) * 20 / 2240 + 20px); /* 40-> 20 @ 2560 -> 320 */
+}
+.company-info p {
+    font-weight: 300;
+    font-size: calc((100vw - 320px) * 5 / 2240 + 13px); /* 18-> 13 @ 2560 -> 320 */
+    line-height: calc((100vw - 320px) * 6 / 2240 + 18px); /* 24-> 18 @ 2560 -> 320 */
+    text-align: right;
+}
+
+.page-content {
+	max-width: 1100px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: calc((100vw - 320px) * 40 / 2240 + 30px) 0; /* 70-> 30 @ 2560 -> 320 */
+}
+.page-content p, .page-content li {
+	font-weight: 400;
+	font-size: calc((100vw - 320px) * 7 / 2240 + 13px); /* 20-> 13 @ 2560 -> 320 */
+	line-height: calc((100vw - 320px) * 11 / 2240 + 19px); /* 30-> 19 @ 2560 -> 320 */
+	color: #58595b;
+}
+p.subtitle {
+    font-size: calc((100vw - 320px) * 8 / 2240 + 16px);
+    color: #0f581a;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.page-content > div:not(#divHome) img {
+	max-width: 800px;
+	margin: auto;
+	margin-top: calc((100vw - 320px) * 25 / 2240 + 25px); /* 50-> 25 @ 2560 -> 320 */
+}
+.first-img {
+	margin-bottom: calc((100vw - 320px) * 25 / 2240 + 25px); /* 50-> 25 @ 2560 -> 320 */
+}
+.footer {
+	width: 100%;
+	border-top: 1px solid #0f581a;
+	padding: 15px 0 30px;
+	text-align: center;
+	font-weight: 400;
+	font-size: calc((100vw - 320px) * 5 / 2240 + 13px); /* 18-> 13 @ 2560 -> 320 */
+	color: #000000;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media only screen and (max-width: 425px) {
+	.top-bar {
+		flex-direction: column;
+	    justify-content: center;
+	}
+	.logo img {
+	    margin-bottom: 15px;
+	}
+	.company-info p {
+	    text-align: center;
+	}
+}

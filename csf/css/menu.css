@@ -1,0 +1,68 @@
+/* CSF */
+
+.logo img {
+    height: calc((100vw - 320px) * 20 / 2240 + 65px);  /*85->65 @2560->320*/
+    width: auto;
+    padding: 3px 0;
+}
+.main-menu {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px;
+    border-color: #d0d2d3;
+    border-style: solid none;
+    padding: calc((100vw - 320px) * 15 / 2240 + 5px) 0;
+}
+.menu-items {
+	max-width: 1000px;
+	width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.menu-item a {
+	font-weight: 400;
+	font-size: calc((100vw - 320px) * 11 / 2240 + 11px);  /*22->11 @2560->320*/
+	color: #000000;
+	margin: auto 10px;
+}
+.menu-item a:hover {
+	color: #0f581a;
+	text-decoration: underline;
+}
+/*lang switcher*/
+.menu-item.lang-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-item.lang-switcher a {
+    color: #000000;
+    opacity: 0.75;
+}
+
+/*sticky
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 3px 5px rgba(0,0,50,0.1);
+}
+.sticky .mobile-menu .menu-icon, .sticky .menu-item a {
+    -webkit-filter: none;
+    filter: none;
+	text-shadow: none;
+}*/
+
+/*=== RESPONSIVE ===*/
+
+@media only screen and (max-width: 768px) {
+	.main-menu .menu-items {
+	    justify-content: center;
+	}
+
+}
